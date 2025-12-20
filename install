@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# Dotfiles installer script
+# Usage: ./install
+
+set -e
+
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+STOW_FOLDERS="vim,tmux,zsh"
+
+echo "Installing dotfiles from $DOTFILES_DIR"
+
+# Check if stow is installed
+if ! command -v stow &> /dev/null; then
+    echo "GNU Stow is required but not installed."
+    echo "Install it with: sudo apt install stow (Ubuntu/Debian) or brew install stow (macOS)"
+    exit 1
+fi
+
+cd "$DOTFILES_DIR"
+
+# Stow each folder
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
+    if [ -d "$folder" ]; then
+        echo "Stowing $folder..."
+        stow -v -R "$folder"
+    else
+        echo "Warning: $folder directory not found, skipping..."
+    fi
+done
+
+echo "Dotfiles installation complete!"

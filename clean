@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Clean environment script - removes all stowed dotfiles
+# Usage: ./clean
+
+set -e
+
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+STOW_FOLDERS="vim,tmux,zsh"
+
+echo "Removing dotfiles from $DOTFILES_DIR"
+
+cd "$DOTFILES_DIR"
+
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
+    if [ -d "$folder" ]; then
+        echo "Unstowing $folder..."
+        stow -v -D "$folder"
+    fi
+done
+
+echo "Dotfiles removal complete!"
