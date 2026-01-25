@@ -1,0 +1,176 @@
+{
+  "[brazilPackageConfig]": {
+    "workbench.editor.languageDetection": false
+  },
+  "amazonQ.suppressPrompts": {
+    "amazonQChatDisclaimer": true,
+    "amazonQChatPairProgramming": true,
+    "amazonQSessionConfigurationMessage": true
+  },
+  "chat.disableAIFeatures": true,
+  "editor.accessibilitySupport": "off",
+  "files.exclude": {
+    ".viceroy": true,
+    "apollo-overrides": true,
+    "release-info": true,
+    "src/*/build": false,
+    "build": false,
+    "env": true,
+    "packageInfo*": true,
+    ".bemol": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "files.watcherExclude": {
+    "**/build/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "launch": {
+    "configurations": [
+      {
+        "hostName": "localhost",
+        "name": "Attach to ProductUIService",
+        "port": 5050,
+        "request": "attach",
+        "type": "java"
+      }
+    ],
+    "version": "0.2.0"
+  },
+  "roo-cline.allowedCommands": [
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "roo-cline.deniedCommands": [],
+  "search.exclude": {
+    "env": true,
+    "src/*/build": true,
+    "build": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.suggest.windowsExecutableExtensions": {},
+  "viceroy.config.internal.lastUpdateTime": "2026-01-24T21:29:21.252Z",
+  "viceroy.config.lastVersion": "0.53.202642",
+  "viceroy.config.setup.amazonQ": false,
+  "viceroy.doc.welcome.showAtStartup": false,
+  "viceroy.config.includeWorkspaceAsFolder": false,
+  "viceroy.marketplace.extensionUpdateChannels": {
+    "amazon.controls-dsl": "stable",
+    "amzn.AWSGuruQLinter": "stable",
+    "amzn.amzn-pippin": "stable",
+    "amzn.vscode-isengard-tooltip": "stable",
+    "asbx.amzn-cline": "stable",
+    "kaze.vscode-plugin-contribution-model": "stable",
+    "marklel.vscode-brazil": "stable",
+    "mchpatr.datapath-language-server": "stable",
+    "mchpatr.datapath-vscode": "stable"
+  },
+  "viceroy.workspaceSyncStrategy": "automatic",
+  "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text",
+        "foreground": "red",
+        "background": "white",
+        "opacity": 50,
+        "iconColour": "yellow"
+  },
+  "todohighlight.isEnable": true,
+  "todohighlight.include": [
+    "**/*.java",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.wordWrap": "on",
+  "workbench.settings.applyToAllProfiles": [
+    "editor.wordWrap"
+  ],
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.defaultFormatter": "mervin.markdown-formatter"
+  },
+  "editor.multiCursorModifier": "ctrlCmd",
+  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true, // enable Markdown Preview Enhanced
+  "markdownlint.run": "onSave",
+  "markdownlint.severityForError": "Ignore",
+  "files.associations": {
+    "*.md": "markdown"
+  },
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "GitHub Dark",
+  "editor.codeActionWidget.includeNearbyQuickFixes": false,
+  "editor.lightbulb.enabled": "off",
+  "highlight.regexes": {
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:[\\t\\f\\v ]*\\([^\\r\\n)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^\\r\\n:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\r\\n@]*?)(?= *(?:[^\\r\\n:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^\\r\\n@]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#ffcc00",
+          "backgroundColor": "#ffcc00",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#ffcc00",
+          "color": "#1f1f1f"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:[\\t\\f\\v ]*\\([^\\r\\n)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^\\r\\n:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\r\\n@]*?)(?= *(?:[^\\r\\n:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^\\r\\n@]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#cc0000",
+          "backgroundColor": "#cc0000",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#cc0000",
+          "color": "#1f1f1f"
+        }
+      ]
+    }
+  },
+  "editor.tabCompletion": "on",
+  "editor.hover.delay": 10,
+  "makefile.configureOnOpen": true,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on"
+  }
+}
