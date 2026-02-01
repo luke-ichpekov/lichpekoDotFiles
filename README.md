@@ -14,3 +14,4 @@ List of tools that need to be installed:
 - fd
 - mise
 - curl
+- oh my zsh
